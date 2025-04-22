@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+input, select {
+  width: 316;
+  height: 40;
+  min-height: 36px;
+  max-height: 40px;
+  gap: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  padding-top: 2px;
+  padding-right: 269px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-top: 15px;
+}
+
+.form_columns {
+  display: flex;
+  gap: 20px;
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Applicant Information</h2>
+<p id="counter">Total: 15 | Filled: 0 | Left: 15</p>
+
+<form id="mainForm">
+  <div class="form_columns">
+    <div class="column">
+
+      <h3>Last Name*</h3>
+      <label> <input name="last" pattern="[A-Za-z\\- ]{2,}" required></label>
+
+      <h3>First Name*</h3>
+      <label> <input name="first" pattern="[A-Za-z\\- ]{2,}" required></label>
+      <h3>Middle Name*</h3>
+      <label> <input name="middle" pattern="[A-Za-z\\- ]{2,}" required></label>
+      <h3>Social Security Number</h3>
+      <label> <input name="ssn" pattern="\\d{3}-\\d{3}-\\d{3} \\d{2}" required></label>
+      <h3>Birth Date </h3>
+      <label><input type="date" name="birth" required></label>
+      <h3>Email </h3>
+      <label><input name="email" pattern="[^@\\s]+@[^@\\s]+\\.[^@\\s]+" required></label>
+      <h3>Home Phone</h3>
+      <label> <input name="homePhone" pattern="\\d{6,12}" required></label>
+
+    </div>
+
+    <div class="column">
+      <h3>Cell Phone</h3>
+      <label> <input name="cellPhone" pattern="\\d{10,12}" required></label>
+      <h3>Street Address</h3>
+      <label> <input name="street" pattern=".{2,}" required></label>
+      <h3>ZIP Code</h3>
+      <label> <input name="zip" pattern="\\d{5,6}" required></label>
+      <h3>Apartment, Suite, etc.</h3>
+      <label> <input name="apt" pattern=".{1,10}" required></label>
+      <h3>City</h3>
+      <label> <input name="city" pattern=".{2,}" required></label>
+      <h3>State/Province</h3>
+      <label> <input name="state" pattern=".{2,}" required></label>
+      <h3>Type of Residence</h3>
+      <label>
+        <select required>
+          <option value="">Select</option>
+          <option>Apartment</option>
+          <option>House</option>
+          <option>Other</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <label>Upload Image:
+    <input type="file" id="imgUpload" accept="image/*">
+  </label>
+  <img id="preview" src="" alt="" style="max-width: 300px; display:none; margin-top:10px;">
+
+  <label><input type="checkbox" name="co" value="yes"> Co-Applicant is needed</label>
+
+  <button type="submit">Submit</button>
+</form>
+  </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
